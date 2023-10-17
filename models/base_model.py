@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """This script contains the class BaseModel that defines common attributes/method for other classes"""
+""" Class BaseModel """
 import uuid
 from datetime import datetime
 import models
@@ -65,33 +66,3 @@ class BaseModel:
         obj_dict['created_at'] = self.created_at.isoformat()
         obj_dict['updated_at'] = self.updated_at.isoformat()
         return obj_dict
-
-#sample
-
-class my_model(BaseModel):
-    pass
-
-
-def test_base(my_model):
-    sample_model = my_model()
-    sample_model.name = "my first model"
-    sample_model.id = 98
-    print("my first sample: ", sample_model)
-    print("\n####\n")
-    print(sample_model.id)
-    print()
-    print(type(sample_model.created_at))
-    print("---")
-    print()
-    sample_model.save()
-    print()
-    print("saved model: ", sample_model)
-    sample_model_json = sample_model.to_dict()
-    print("Json sample: ", sample_model_json)
-    print("##")
-    for key in sample_model_json.keys():
-        print("\t{}: ({}) - {}".format(key,
-                                       type(sample_model_json[key]), sample_model_json[key]))
-
-
-test_base(my_model)
