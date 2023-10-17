@@ -2,6 +2,7 @@
 from models.base_model import BaseModel
 
 
+
 class my_model(BaseModel):
     pass
 
@@ -12,6 +13,10 @@ def test_base(my_model):
     sample_model.id = 98
     print("my first sample: ", sample_model)
     print("\n####\n")
+    print(sample_model.id)
+    print()
+    print(type(sample_model.created_at))
+    print("---")
     print()
     sample_model.save()
     print()
@@ -20,8 +25,8 @@ def test_base(my_model):
     print("Json sample: ", sample_model_json)
     print("##")
     for key in sample_model_json.keys():
-        print("\t{}: ({}) - {}".format(key, type(sample_model_json[key]), sample_model_json[key]))
+        print("\t{}: ({}) - {}".format(key,
+                                       type(sample_model_json[key]), sample_model_json[key]))
 
 
 test_base(my_model)
-
