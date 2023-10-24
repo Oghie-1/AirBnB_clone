@@ -1,4 +1,9 @@
-.topleft h1 {
+.places {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.topleft > h1 {
     text-align: left;
     font-size: 30px;
 
@@ -7,17 +12,24 @@
 article {
     display: flex;
     flex-direction: row;
+    background-color: #FFFFFF;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-article div {
+article > div {
     width: 390px;
-    padding: 20px;
     margin: 20px;
     border: 1px solid #FF5A5F;
     border-radius: 4px;
     text-align: center;
+    flex-direction: column;
 }
 
-article h2 {
+article > div > h2 {
     font-size: 30px;
+    margin: 0;
+    padding: 0;
 }

@@ -1,11 +1,9 @@
 /* Footer styles */
 footer {
     color: black;
-    height: 60px;
+    height: 20px;
     width: 100%;
     border-top: 1px solid #CCCCCC;
-    position: absolute;
-    bottom: 0;
     line-height: 60px;
     text-align: center;
 }
